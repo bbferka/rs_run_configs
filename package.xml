@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>rs_demo_configs</name>
+  <version>0.0.1</version>
+  <description>AE definitions and launch file for running robosherlock demos </description>
+
+  <maintainer email="balintbe@cs.uni-bremen.de">Ferenc Balint-Benczedi</maintainer>
+
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>robosherlock</depend>
+  <depend>rs_addons</depend>
+  <depend>rs_queryanswering</depend>
+
+
+  <export>
+  </export>
+</package>
