@@ -7,12 +7,6 @@
     <delegateAnalysisEngine key="ARMarkersDetector">
       <import location="../../../rs_addons/descriptors/annotators/ARMarkersDetector.xml"/>
     </delegateAnalysisEngine>
-    <delegateAnalysisEngine key="BilateralSymmetryAnnotator">
-      <import location="../../../robosherlock/descriptors/annotators/segmentation/BilateralSymmetryAnnotator.xml"/>
-    </delegateAnalysisEngine>
-    <delegateAnalysisEngine key="BilateralSymmetrySegmentation">
-      <import location="../../../robosherlock/descriptors/annotators/segmentation/BilateralSymmetrySegmentation.xml"/>
-    </delegateAnalysisEngine>
     <delegateAnalysisEngine key="BlurDetectorAnnotator">
       <import location="../../../robosherlock/descriptors/annotators/utils/BlurDetectorAnnotator.xml"/>
     </delegateAnalysisEngine>
@@ -85,9 +79,6 @@
     <delegateAnalysisEngine key="ObjectIdentityResolution">
       <import location="../../../robosherlock/descriptors/annotators/tracker/ObjectIdentityResolution.xml"/>
     </delegateAnalysisEngine>
-    <delegateAnalysisEngine key="OverSegmentationAnnotator">
-      <import location="../../../robosherlock/descriptors/annotators/segmentation/OverSegmentationAnnotator.xml"/>
-    </delegateAnalysisEngine>
     <delegateAnalysisEngine key="PCLDescriptorExtractor">
       <import location="../../../robosherlock/descriptors/annotators/annotation/PCLDescriptorExtractor.xml"/>
     </delegateAnalysisEngine>
@@ -118,17 +109,8 @@
     <delegateAnalysisEngine key="ResultAdvertiser">
       <import location="../../../robosherlock/descriptors/annotators/io/ResultAdvertiser.xml"/>
     </delegateAnalysisEngine>
-    <delegateAnalysisEngine key="RotationalSymmetryAnnotator">
-      <import location="../../../robosherlock/descriptors/annotators/segmentation/RotationalSymmetryAnnotator.xml"/>
-    </delegateAnalysisEngine>
-    <delegateAnalysisEngine key="RotationalSymmetrySegmentation">
-      <import location="../../../robosherlock/descriptors/annotators/segmentation/RotationalSymmetrySegmentation.xml"/>
-    </delegateAnalysisEngine>
     <delegateAnalysisEngine key="SacModelAnnotator">
       <import location="../../../robosherlock/descriptors/annotators/annotation/SacModelAnnotator.xml"/>
-    </delegateAnalysisEngine>
-    <delegateAnalysisEngine key="SegmentationResultDisplayer">
-      <import location="../../../robosherlock/descriptors/annotators/segmentation/SegmentationResultDisplayer.xml"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="SimtrackDetection">
       <import location="../../../rs_addons/descriptors/annotators/SimatrackDetection.xml"/>
@@ -376,7 +358,7 @@
     <nameValuePair>
       <name>DeCafKDTreeIndices</name>
       <value>
-        <string>/caffe/extracted_feats/ease_kickoff_pnp_bvlc_fc7/CNN_pnp_5_obj_kdtree.idx</string>
+        <string>/caffe/extracted_feats/ease_kickoff_pnp_bvlc_fc7/CNN_pnp_5_obj.idx</string>
       </value>
     </nameValuePair>
 
