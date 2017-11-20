@@ -366,7 +366,7 @@
       <name>camera_config_files</name>
       <value>
        <array>
-         <string>config_kinect_robot.init</string>
+         <string>config_kinect_robot.ini</string>
 <!--         <string>config_mongodb_playback.ini</string>-->
        </array>
       </value>
