@@ -315,7 +315,7 @@
         <value>
         <array>
           <string>kitchen_sink_block_counter_top</string>
-          <string>kitchen_meal_table_counter_top</string>
+          <string>kitchen_island_counter_top</string>
         </array>
         </value>
       </nameValuePair>
@@ -366,7 +366,8 @@
       <name>camera_config_files</name>
       <value>
        <array>
-         <string>config_mongodb_playback.ini</string>
+         <string>config_kinect_robot.init</string>
+<!--         <string>config_mongodb_playback.ini</string>-->
        </array>
       </value>
     </nameValuePair>
