@@ -7,6 +7,9 @@
     <delegateAnalysisEngine key="ARMarkersDetector">
       <import location="../../../rs_addons/descriptors/annotators/ARMarkersDetector.xml"/>
     </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="BeliefToKnowRob">
+      <import location="../../../rs_kbreasoning/rs_queryanswering/descriptors/annotators/BeliefToKnowRob.xml"/>
+    </delegateAnalysisEngine>
     <delegateAnalysisEngine key="BlurDetectorAnnotator">
       <import location="../../../robosherlock/descriptors/annotators/utils/BlurDetectorAnnotator.xml"/>
     </delegateAnalysisEngine>
@@ -366,8 +369,8 @@
       <name>camera_config_files</name>
       <value>
        <array>
-         <string>config_kinect_robot.ini</string>
-<!--         <string>config_mongodb_playback.ini</string>-->
+<!--         <string>config_kinect_robot.ini</string>-->
+         <string>config_mongodb_playback.ini</string>
        </array>
       </value>
     </nameValuePair>
@@ -451,6 +454,7 @@
       <node>DeCafClassifier</node>
       <node>TFBroadcaster</node>
       <node>ObjectIdentityResolution</node>
+      <node>BeliefToKnowRob</node>
       <node>StorageWriter</node>
     </fixedFlow>
     </flowConstraints>
