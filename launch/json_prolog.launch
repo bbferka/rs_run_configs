@@ -1,0 +1,8 @@
+<launch>
+   
+    <arg name="initial_package" default="rs_run_configs" />
+    <param name="initial_package" type="string" value="$(arg initial_package)" />
+    <param name="initial_goal" type="string" value="visualisation_canvas,rs_interface(A,pnp_ease)" />
+    <node name="json_prolog" pkg="json_prolog" type="json_prolog_node" cwd="node" output="screen" />
+    
+</launch>
