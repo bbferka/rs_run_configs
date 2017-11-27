@@ -55,6 +55,9 @@
     <delegateAnalysisEngine key="FeatureAnnotator">
       <import location="../../../robosherlock/descriptors/annotators/annotation/FeatureAnnotator.xml"/>
     </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="GetRenderedViews">
+      <import location="../../../rs_kbreasoning/rs_queryanswering/descriptors/annotators/GetRenderedViews.xml"/>
+    </delegateAnalysisEngine>
     <delegateAnalysisEngine key="GogglesAnnotator">
       <import location="../../../robosherlock/descriptors/annotators/annotation/GogglesAnnotator.xml"/>
     </delegateAnalysisEngine>
@@ -455,6 +458,7 @@
       <node>TFBroadcaster</node>
       <node>ObjectIdentityResolution</node>
       <node>BeliefToKnowRob</node>
+      <node>GetRenderedViews</node>
       <node>StorageWriter</node>
     </fixedFlow>
     </flowConstraints>
