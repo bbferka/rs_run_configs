@@ -353,21 +353,21 @@
    <nameValuePair>
       <name>DeCafH5File</name>
       <value>
-        <string>/caffe/extracted_feats/ease_kickoff_pnp_bvlc_fc7/CNN_pnp_5_obj.hdf5</string>
+        <string>/caffe/extracted_feats/ease_kickoff_pnp_bvlc_fc7/CNN_pnp_breakfast_1.hdf5</string>
       </value>
     </nameValuePair>
 
     <nameValuePair>
       <name>DeCafListFile</name>
       <value>
-        <string>/caffe/extracted_feats/ease_kickoff_pnp_bvlc_fc7/CNN_pnp_5_obj.list</string>
+        <string>/caffe/extracted_feats/ease_kickoff_pnp_bvlc_fc7/CNN_pnp_breakfast_1.list</string>
       </value>
     </nameValuePair>
 
     <nameValuePair>
       <name>DeCafKDTreeIndices</name>
       <value>
-        <string>/caffe/extracted_feats/ease_kickoff_pnp_bvlc_fc7/CNN_pnp_5_obj.idx</string>
+        <string>/caffe/extracted_feats/ease_kickoff_pnp_bvlc_fc7/CNN_pnp_breakfast_1.idx</string>
       </value>
     </nameValuePair>
 
@@ -445,6 +445,12 @@
       <node>ImagePreprocessor</node>
       <node>RegionFilter</node>
       <node>PlaneAnnotator</node>
+      <node>NormalEstimator</node>
+      <node>PointCloudClusterExtractor</node>
+      <node>ImageSegmentationAnnotator</node>
+      <node>ClusterMerger</node>
+      <node>CaffeAnnotator</node>
+      <node>DeCafClassifier</node>
       <node>OffScreenSceneVariation</node>
     </fixedFlow>
     </flowConstraints>
