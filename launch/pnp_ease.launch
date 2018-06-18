@@ -1,11 +1,10 @@
 <!-- Launch file for running RS locally with web viwualization -->
 <launch>
-  
   <!-- launch robosherlock -->
   <arg name="ae"   default="pnp_ease"/>
-  <arg name="vis"  default="false"/>
+  <arg name="vis"  default="true"/>
   <arg name="wait" default="true"/>
-  <node if="$(arg wait)"  name="RoboSherlock" pkg="rs_queryanswering" type="runAE" output="screen">
+  <node if="$(arg wait)"  name="RoboSherlock" pkg="robosherlock" type="run" output="screen">
    <param name="ae" type="str" value="$(arg ae)"/>
    <param name="vis" type="bool" value="$(arg vis)"/>
    <param name="wait" type="bool" value="$(arg wait)"/> 

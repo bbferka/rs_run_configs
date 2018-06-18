@@ -395,21 +395,21 @@
    <nameValuePair>
       <name>DeCafH5File</name>
       <value>
-        <string>/caffe/extracted_feats/ease_kickoff_pnp_bvlc_fc7/CNN_pnp_5_obj.hdf5</string>
+        <string>/caffe/extracted_feats/pnp_exp_bvlc_fc7/CNN_pnp_breakfast_1.hdf5</string>
       </value>
     </nameValuePair>
 
     <nameValuePair>
       <name>DeCafListFile</name>
       <value>
-        <string>/caffe/extracted_feats/ease_kickoff_pnp_bvlc_fc7/CNN_pnp_5_obj.list</string>
+        <string>/caffe/extracted_feats/pnp_exp_bvlc_fc7/CNN_pnp_breakfast_1.list</string>
       </value>
     </nameValuePair>
 
     <nameValuePair>
       <name>DeCafKDTreeIndices</name>
       <value>
-        <string>/caffe/extracted_feats/ease_kickoff_pnp_bvlc_fc7/CNN_pnp_5_obj.idx</string>
+        <string>/caffe/extracted_feats/pnp_exp_bvlc_fc7/CNN_pnp_breakfast_1.idx</string>
       </value>
     </nameValuePair>
 
@@ -417,7 +417,8 @@
       <name>camera_config_files</name>
       <value>
        <array>
-         <string>config_kinect_robot.ini</string>
+<!--         <string>config_kinect_robot.ini</string>-->
+         <string>config_web_demo.ini</string>
        </array>
       </value>
     </nameValuePair>
@@ -467,23 +468,23 @@
       <nameValuePair>
         <name>border</name>
         <value>
-          <float>0.05</float>
+          <float>0.01</float>
         </value>
       </nameValuePair>
 
       <nameValuePair>
         <name>enable_change_detection</name>
         <value>
-          <boolean>true</boolean>
+          <boolean>false</boolean>
         </value>
       </nameValuePair>
 
     </configurationParameterSettings>
     <flowConstraints>
     <fixedFlow>
+      <node>Trigger</node>
       <node>CollectionReader</node>
       <node>ImagePreprocessor</node>
-      <node>HandleAnnotator</node>
       <node>RegionFilter</node>
       <node>NormalEstimator</node>
       <node>PlaneAnnotator</node>
@@ -493,7 +494,7 @@
       <node>ClusterFilter</node>
       <node>Cluster3DGeometryAnnotator</node>
       <node>CaffeAnnotator</node>
-      <node>FeatureAnnotator</node>
+<!--      <node>FeatureAnnotator</node>-->
       <node>PCLFeatureExtractor</node>
       <node>ClusterTFLocationAnnotator</node>
       <node>ClusterColorHistogramCalculator</node>
@@ -502,7 +503,7 @@
       <node>DeCafClassifier</node>
       <node>TFBroadcaster</node>
       <node>ObjectIdentityResolution</node>
-      <!--<node>BeliefToKnowRob</node>
+<!--      <node>BeliefToKnowRob</node>
       <node>GetRenderedViews</node>-->
 <!--      <node>StorageWriter</node>-->
     </fixedFlow>

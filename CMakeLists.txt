@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(rs_run_configs)
-find_package(catkin REQUIRED robosherlock rs_addons rs_queryanswering)
+find_package(catkin REQUIRED robosherlock rs_addons)
 ################################################################################
 ## Constants for project                                                      ##
 ################################################################################

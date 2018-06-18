@@ -1,8 +1,7 @@
 <launch>
-   
-    <arg name="initial_package" default="rs_run_configs" />
+    <arg name="initial_package" default="robosherlock_knowrob" />
+    <arg name="initial_goal" default="rs_interface(pnp_ease,A)"/>
     <param name="initial_package" type="string" value="$(arg initial_package)" />
-    <param name="initial_goal" type="string" value="rs_interface(A,pnp_ease)" />
+    <param name="initial_goal" type="string" value="$(arg initial_goal)" />
     <node name="json_prolog" pkg="json_prolog" type="json_prolog_node" cwd="node" output="screen" />
-    
 </launch>

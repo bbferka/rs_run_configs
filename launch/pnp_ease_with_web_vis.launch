@@ -3,9 +3,9 @@
 
   <include file= "$(find rs_run_configs)/launch/json_prolog.launch"/>
   
-<!--  <include file ="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
+  <include file ="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
 	<arg name="port" default="9090"/>
-  </include>-->
+  </include>
   <node name="http_server" pkg="rs_web" type="http_server" output="screen" respawn="true"/>
   <node name="web_video_server" pkg="web_video_server" type="web_video_server" output="screen" respawn="true"/>
 
