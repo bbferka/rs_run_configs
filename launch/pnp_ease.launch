@@ -7,7 +7,8 @@
   <node if="$(arg wait)"  name="RoboSherlock" pkg="robosherlock" type="run" output="screen">
    <param name="ae" type="str" value="$(arg ae)"/>
    <param name="vis" type="bool" value="$(arg vis)"/>
-   <param name="wait" type="bool" value="$(arg wait)"/> 
+   <param name="wait" type="bool" value="$(arg wait)"/>
+   <param name="withIDRes" type="bool" value="true" />
   </node>
 
   <!-- launch realtime filter -->
