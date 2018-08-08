@@ -3,10 +3,22 @@
 
   <include file= "$(find rs_run_configs)/launch/json_prolog.launch"/>
   
-  <include file ="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
-	<arg name="port" default="9090"/>
-  </include>
-  <node name="http_server" pkg="rs_web" type="http_server" output="screen" respawn="true"/>
+  <include file ="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
   <node name="web_video_server" pkg="web_video_server" type="web_video_server" output="screen" respawn="true"/>
+
+  <node name="rs_web" pkg="rs_web" type="app.py" output="screen" respawn="true" />
+
+   <!-- launch robosherlock -->
+  <arg name="ae"   default="web_demo"/>
+  <arg name="vis"  default="false"/>
+  <arg name="wait" default="true"/>
+  <arg name="parallel" default="true"/>
+  <node if="$(arg wait)"  name="RoboSherlock" pkg="robosherlock" type="run" output="screen">
+   <param name="ae" type="str" value="$(arg ae)"/>
+   <param name="vis" type="bool" value="$(arg vis)"/>
+   <param name="wait" type="bool" value="$(arg wait)"/>
+   <param name="withIDRes" type="bool" value="true" />
+   <param name="parallel" type="bool" value="$(arg parallel)" />
+  </node>
 
 </launch>
