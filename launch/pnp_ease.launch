@@ -1,14 +1,16 @@
 <!-- Launch file for running RS locally with web viwualization -->
 <launch>
   <!-- launch robosherlock -->
-  <arg name="ae"   default="pnp_ease"/>
-  <arg name="vis"  default="true"/>
-  <arg name="wait" default="true"/>
+  <arg name="ae"       default="pnp_ease"/>
+  <arg name="vis"      default="true"/>
+  <arg name="wait"     default="true"/>
+  <arg name="parallel" default="true"/>
   <node if="$(arg wait)"  name="RoboSherlock" pkg="robosherlock" type="run" output="screen">
-   <param name="ae" type="str" value="$(arg ae)"/>
-   <param name="vis" type="bool" value="$(arg vis)"/>
-   <param name="wait" type="bool" value="$(arg wait)"/>
+   <param name="ae"        type="str"  value="$(arg ae)"/>
+   <param name="vis"       type="bool" value="$(arg vis)"/>
+   <param name="wait"      type="bool" value="$(arg wait)"/>
    <param name="withIDRes" type="bool" value="true" />
+   <param name="parallel"  type="bool" value="$(arg parallel)" />
   </node>
 
   <!-- launch realtime filter -->
