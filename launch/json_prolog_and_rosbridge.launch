@@ -1,0 +1,11 @@
+<!-- Launch file for running RS locally with web viwualization -->
+<launch>
+
+  <include file= "$(find rs_run_configs)/launch/json_prolog.launch"/>
+  
+  <include file ="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
+  <node name="web_video_server" pkg="web_video_server" type="web_video_server" output="screen" respawn="true"/>
+
+  <node name="rs_web" pkg="rs_web" type="app.py" output="screen" respawn="true" />
+
+</launch>

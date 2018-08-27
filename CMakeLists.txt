@@ -41,7 +41,6 @@ include_directories(
 ## Update analysis engines, typesystem and include all relevant files         ##
 ################################################################################
 ##Update xml list of annotators inside analysis engines
-update_analysis_engines(robosherlock rs_addons rs_queryanswering)
 ## generate classes from the typesystem xml files
 generate_type_system(robosherlock rs_addons rs_queryanswering)
 #find all relevant files
