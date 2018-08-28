@@ -316,9 +316,6 @@
       <node>ClusterColorHistogramCalculator</node>
       <node>PrimitiveShapeAnnotator</node>
       <node>ObjectIdentityResolution</node>
-<!--      <node>BeliefToKnowRob</node>
-      <node>GetRenderedViews</node>-->
-<!--      <node>StorageWriter</node>-->
     </fixedFlow>
     </flowConstraints>
     <typePriorities/>
