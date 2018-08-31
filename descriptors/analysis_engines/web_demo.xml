@@ -309,7 +309,7 @@
       <node>PointCloudClusterExtractor</node>
       <node>ImageSegmentationAnnotator</node>
       <node>ClusterMerger</node>
-      <node>ClusterFilter</node>
+<!--      <node>ClusterFilter</node>-->
       <node>Cluster3DGeometryAnnotator</node>
       <node>PCLDescriptorExtractor</node>
       <node>ClusterTFLocationAnnotator</node>
