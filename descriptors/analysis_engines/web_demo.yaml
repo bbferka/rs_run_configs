@@ -1,0 +1,33 @@
+ae: 
+  name: web_demo
+fixedflow:
+  - CollectionReader
+  - ImagePreprocessor 
+  - RegionFilter
+  - NormalEstimator
+  - PlaneAnnotator
+  - PointCloudClusterExtractor
+  - ImageSegmentationAnnotator
+  - ClusterMerger
+  - Cluster3DGeometryAnnotator
+  - PCLDescriptorExtractor 
+  - ClusterTFLocationAnnotator
+  - ClusterColorHistogramCalculator
+  - PrimitiveShapeAnnotator
+  - ObjectIdentityResolution
+CollectionReader: 
+  camera_conif_files: ['config_mongodb_webdemo.ini']
+RegionFilter:
+  defaultRegions: ['kitchen_sink_block_counter_top','kitchen_island_counter_top']
+  border: 0.01
+  enable_change_detection: false
+ImageSegmentationAnnotator:
+  hsvFilter: true
+  segmMode: 'INVBINARY'
+  minSize: 1200
+PointCloudClusterExtractor:
+  cluster_min_size: 500
+Cluster3DGeometryAnnotator: 
+  projectOnPlane: false
+  sor_filter: false
+  overwriteExistingPoseEstimate: false
