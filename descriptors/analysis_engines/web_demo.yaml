@@ -16,7 +16,7 @@ fixedflow:
   - PrimitiveShapeAnnotator
   - ObjectIdentityResolution
 CollectionReader: 
-  camera_conif_files: ['config_mongodb_webdemo.ini']
+  camera_config_files: ['config_mongodb_webdemo.ini']
 RegionFilter:
   defaultRegions: ['kitchen_sink_block_counter_top','kitchen_island_counter_top']
   border: 0.01
