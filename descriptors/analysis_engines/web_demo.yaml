@@ -1,6 +1,7 @@
 ae: 
   name: web_demo
 fixedflow:
+  - Trigger
   - CollectionReader
   - ImagePreprocessor 
   - RegionFilter
@@ -11,14 +12,16 @@ fixedflow:
   - ClusterMerger
   - Cluster3DGeometryAnnotator
   - PCLDescriptorExtractor 
-  - ClusterTFLocationAnnotator
-  - ClusterColorHistogramCalculator
-  - PrimitiveShapeAnnotator
-  - ObjectIdentityResolution
+  - CaffeAnnotator
+  - KnnAnnotator
+#  - ClusterTFLocationAnnotator
+#  - ClusterColorHistogramCalculator
+#  - PrimitiveShapeAnnotator
+#  - ObjectIdentityResolution
 CollectionReader: 
   camera_config_files: ['config_mongodb_webdemo.ini']
 RegionFilter:
-  defaultRegions: ['kitchen_sink_block_counter_top','kitchen_island_counter_top']
+  defaultRegions: ['kitchen_sink_block_counter_top','kitchen_island_counter_top','kitchen_meal_table_counter_top']
   border: 0.01
   enable_change_detection: false
 ImageSegmentationAnnotator:
@@ -31,3 +34,5 @@ Cluster3DGeometryAnnotator:
   projectOnPlane: false
   sor_filter: false
   overwriteExistingPoseEstimate: false
+PCLDescriptorExtractor:
+  descriptorType: VFH 
