@@ -1,7 +1,7 @@
 ae: 
   name: web_demo
 fixedflow:
-  - Trigger
+#  - Trigger
   - CollectionReader
   - ImagePreprocessor 
   - RegionFilter
@@ -14,10 +14,10 @@ fixedflow:
   - PCLDescriptorExtractor 
   - CaffeAnnotator
   - KnnAnnotator
-#  - ClusterTFLocationAnnotator
-#  - ClusterColorHistogramCalculator
-#  - PrimitiveShapeAnnotator
-#  - ObjectIdentityResolution
+  - ClusterColorHistogramCalculator
+  - PrimitiveShapeAnnotator
+  - ObjectIdentityResolution
+  - StorageWriter
 CollectionReader: 
   camera_config_files: ['config_mongodb_webdemo.ini']
 RegionFilter:
@@ -36,3 +36,5 @@ Cluster3DGeometryAnnotator:
   overwriteExistingPoseEstimate: false
 PCLDescriptorExtractor:
   descriptorType: VFH 
+StorageWriter:
+  storagedb: ScenesAnnotated 
