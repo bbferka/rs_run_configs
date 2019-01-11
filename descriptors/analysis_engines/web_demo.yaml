@@ -1,12 +1,13 @@
 ae: 
   name: web_demo
 fixedflow:
-#  - Trigger
+  - Trigger
   - CollectionReader
   - ImagePreprocessor 
   - RegionFilter
   - NormalEstimator
   - PlaneAnnotator
+#  - HandleAnnotator
   - PointCloudClusterExtractor
   - ImageSegmentationAnnotator
   - ClusterMerger
@@ -16,6 +17,7 @@ fixedflow:
   - KnnAnnotator
   - ClusterColorHistogramCalculator
   - PrimitiveShapeAnnotator
+  - MLNInferencer
   - ObjectIdentityResolution
   - StorageWriter
 CollectionReader: 
@@ -24,17 +26,12 @@ RegionFilter:
   defaultRegions: ['kitchen_sink_block_counter_top','kitchen_island_counter_top','kitchen_meal_table_counter_top']
   border: 0.01
   enable_change_detection: false
-ImageSegmentationAnnotator:
-  hsvFilter: true
-  segmMode: 'INVBINARY'
-  minSize: 1200
 PointCloudClusterExtractor:
-  cluster_min_size: 500
-Cluster3DGeometryAnnotator: 
-  projectOnPlane: false
-  sor_filter: false
-  overwriteExistingPoseEstimate: false
-PCLDescriptorExtractor:
-  descriptorType: VFH 
+  polygon_min_height: 0.05
+ImageSegmentationAnnotator:
+  threshold: 100.0
+  hsvThreshold: 110.0
+  hsvFilter: false
+  cannyEdgeSegmentation: false
 StorageWriter:
   storagedb: ScenesAnnotated 
