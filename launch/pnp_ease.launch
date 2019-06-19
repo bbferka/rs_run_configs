@@ -2,9 +2,9 @@
 <launch>
   <!-- launch robosherlock -->
   <arg name="ae"       default="pnp_ease"/>
-  <arg name="vis"      default="true"/>
+  <arg name="vis"      default="false"/>
   <arg name="wait"     default="true"/>
-  <arg name="parallel" default="true"/>
+  <arg name="parallel" default="false"/>
   <arg name="pervasive" default="false"/>
   <node name="RoboSherlock" pkg="robosherlock" type="run" output="screen">
    <param name="ae"        type="str"  value="$(arg ae)"/>

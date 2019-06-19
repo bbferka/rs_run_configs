@@ -36,7 +36,7 @@ PointCloudClusterExtractor:
 ImageSegmentationAnnotator:
   threshold: 100.0
   hsvThreshold: 110.0
-  hsvFilter: true
+  hsvFilter: false 
   cannyEdgeSegmentation: false
   segmMode: INVBINARY
   minSize: 1200 
