@@ -1,0 +1,49 @@
+ae: 
+  name: pnp_ease
+fixedflow:
+  - CollectionReader
+  - ImagePreprocessor 
+  - HandleAnnotator  
+  - RegionFilter
+  - NormalEstimator
+  - PlaneAnnotator
+  - PointCloudClusterExtractor
+  - ImageSegmentationAnnotator
+  - ClusterMerger
+  - ClusterFilter
+  - Cluster3DGeometryAnnotator
+  - PCLDescriptorExtractor 
+  - FeatureAnnotator 
+  - ClusterTFLocationAnnotator
+  - CaffeAnnotator
+  - TFBroadcaster
+  - KnnAnnotator
+  - ClusterColorHistogramCalculator
+  - PrimitiveShapeAnnotator
+  - ObjectIdentityResolution
+  - SacModelAnnotator
+  - StorageWriter
+  - TemplateAlignmentAnnotator
+CollectionReader: 
+  camera_config_files: ['config_kinect_robot.ini']
+RegionFilter:
+  defaultRegions: ['kitchen_sink_block_counter_top','kitchen_island_counter_top','kitchen_meal_table_counter_top']
+  border: 0.01
+  enable_change_detection: false
+PointCloudClusterExtractor:
+  polygon_min_height: 0.05
+  cluster_min_size: 500
+ImageSegmentationAnnotator:
+  threshold: 100.0
+  hsvThreshold: 110.0
+  hsvFilter: true
+  cannyEdgeSegmentation: false
+  segmMode: INVBINARY
+  minSize: 1200 
+StorageWriter:
+  storagedb: ScenesEASEPnPDemo 
+  clearStorageOnStart: true
+Cluster3DGeometryAnnotator:
+  overwriteExsistingPoseEstimate: false
+  sor_filter: true
+  project_on_plaen: false
