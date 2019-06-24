@@ -12,8 +12,8 @@ fixedflow:
   - ClusterMerger
   - ClusterFilter
   - Cluster3DGeometryAnnotator
-  - PCLDescriptorExtractor 
-  - FeatureAnnotator 
+#  - PCLDescriptorExtractor 
+#  - FeatureAnnotator 
   - ClusterTFLocationAnnotator
   - CaffeAnnotator
   - TFBroadcaster
@@ -32,7 +32,7 @@ RegionFilter:
   border: 0.01
   enable_change_detection: false
 PointCloudClusterExtractor:
-  polygon_min_height: 0.05
+  polygon_min_height: 0.02
   cluster_min_size: 500
 ImageSegmentationAnnotator:
   threshold: 100.0
