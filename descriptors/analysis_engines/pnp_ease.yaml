@@ -35,7 +35,7 @@ PointCloudClusterExtractor:
   polygon_min_height: 0.02
   cluster_min_size: 500
 ImageSegmentationAnnotator:
-  threshold: 100.0
+  threshold: 75.0 
   hsvThreshold: 110.0
   hsvFilter: false 
   cannyEdgeSegmentation: false
