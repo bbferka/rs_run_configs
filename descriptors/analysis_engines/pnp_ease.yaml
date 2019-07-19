@@ -20,6 +20,7 @@ fixedflow:
   - KnnAnnotator
   - ClusterColorHistogramCalculator
   - PrimitiveShapeAnnotator
+  - SimtrackDetection
   - ObjectIdentityResolution
   - SacModelAnnotator
   - StorageWriter
