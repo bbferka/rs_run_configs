@@ -10,6 +10,7 @@ fixedflow:
 #  - HandleAnnotator
   - PointCloudClusterExtractor
   - ImageSegmentationAnnotator
+  - TransparentSegmentationAnnotator
   - ClusterMerger
   - Cluster3DGeometryAnnotator
   - PCLDescriptorExtractor 
@@ -17,7 +18,7 @@ fixedflow:
   - KnnAnnotator
   - ClusterColorHistogramCalculator
   - PrimitiveShapeAnnotator
-  - MLNInferencer
+#  - MLNInferencer
   - ObjectIdentityResolution
   - StorageWriter
 CollectionReader: 
